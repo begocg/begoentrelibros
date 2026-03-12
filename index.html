@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bego González</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🌻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dynalight&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="top">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Bego González</a>
+      <nav>
+        <a href="#libros">Mis libros</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-text">Que los girasoles nunca dejen de florecer(te)...</h1>
+      <img src="img/foto-libro-banner.png" alt="Portada de Cuando los girasoles dejen de florecer" class="hero-img" />
+    </div>
+  </section>
+
+  <!-- MIS LIBROS -->
+  <section id="libros" class="section-libros">
+    <div class="section-label">✦ mis libros ✦</div>
+    <h2 class="section-title">Tu próxima lectura</h2>
+    <div class="libro-card" onclick="window.location='libro/index.html'" role="button" tabindex="0" aria-label="Ver Cuando los girasoles dejen de florecer">
+      <div class="libro-img-wrap">
+        <img src="img/foto-libro.jpg" alt="Cuando los girasoles dejen de florecer" />
+        <div class="libro-overlay">
+          <span>Ver libro →</span>
+        </div>
+      </div>
+      <div class="libro-info">
+        <h3>Cuando los girasoles dejen de florecer</h3>
+        <p class="precio">14,90 €</p>
+        <div class="tags">
+          <span>romance</span>
+          <span>doble PDV</span>
+          <span>trauma</span>
+          <span>spicy 🔥</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="section-bio">
+    <div class="section-label">✦ sobre mí ✦</div>
+    <h2 class="section-title">Soy Bego, encantada.</h2>
+    <div class="bio-grid">
+      <div class="bio-text">
+        <p>Nací en Villanueva de la Serena, Extremadura. Soy traductora e informática de profesión (y por gusto), apasionada por la historia del arte y la cultura grecorromana. Soy de las que piensan que siempre es un buen momento para un té o un café, dependiendo del día.</p>
+        <p>Soy un poco culo inquieto y he vivido en Salamanca y en Auvers-sur-Oise (París), aunque actualmente he asentado la cabeza, de momento, en Cáceres.</p>
+        <p>Me encanta leer y escribir y, si mi tiempo libre fuera infinito, haría puzzles o manualidades, pintaría, bordaría... He perdido la cuenta de los hobbies para los que no me queda casi tiempo.</p>
+        <p class="bio-cta">¡Te veo entre las páginas de un libro, ya sea el mío u otro!</p>
+      </div>
+      <div class="bio-photo">
+        <img src="img/foto-autora.jpg" alt="Bego González, autora" />
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTOS & RESEÑAS -->
+  <section class="section-extras">
+    <div class="extras-grid">
+
+      <!-- EVENTOS -->
+      <div class="extras-col">
+        <div class="section-label">✦ eventos ✦</div>
+        <h3 class="extras-title">Eventos</h3>
+        <div class="eventos-list">
+          <div class="evento-item">
+            <div class="evento-fecha">21/11/2025</div>
+            <div class="evento-info">
+              <h4>Firma y presentación de Cuando los girasoles dejen de florecer</h4>
+              <p>Librería Entre páginas de libros, Cáceres</p>
+            </div>
+          </div>
+          <div class="evento-item">
+            <div class="evento-fecha">28/02/2026</div>
+            <div class="evento-info">
+              <h4>Evento Ventana Literaria Romántica</h4>
+              <p>Palacio del vino y la aceituna, Almendralejo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEÑAS -->
+      <div class="extras-col">
+        <div class="section-label">✦ reseñas ✦</div>
+        <h3 class="extras-title">Reseñas</h3>
+        <div class="slider-wrap">
+          <div class="slider" id="slider">
+            <!-- Añade tus imágenes de reseñas aquí -->
+            <div class="slide resena-placeholder">
+              <p>«Un libro super recomendado, te engancha desde la primera página , luego no puedes dejar de leerlo, esperando el siguiente»</p>
+              <span>— Sandra H.</span>
+            </div>
+            <div class="slide resena-placeholder">
+              <p>«📍Ideal para quienes aman las novelas que no solo se leen, sino que se sienten.»</p>
+              <span>— Laura Moraga</span>
+            </div>
+            <div class="slide resena-placeholder">
+              <p>«Si buscas un libro con una historia amena, ligera, adictiva y bien construida, ¡esta es la indicada! No querrás dejar de leer. Me encantó 👏🏻🩵.»</p>
+              <span>— @itsmario.books</span>
+            </div>
+            <div class="slide resena-placeholder">
+              <p>«Bego ha creado una historia preciosa que engancha desde la primera página. Me ha sorprendido mucho la redacción del libro.Tan cuidada y perfecta que puede estar a la altura de autoras consagradas.»</p>
+              <span>— @matilda_cozy_books</span>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prev" aria-label="Anterior">‹</button>
+            <div class="slider-dots" id="dots"></div>
+            <button class="slider-btn" id="next" aria-label="Siguiente">›</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">Bego González</p>
+      <p class="footer-copy">© 2026 Bego González. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="politicas/privacidad.html">Política de privacidad</a>
+        <span>·</span>
+        <a href="politicas/envios.html">Política de envíos</a>
+        <span>·</span>
+        <a href="politicas/reembolso.html">Política de reembolso</a>
+        <span>·</span>
+        <a href="politicas/terminos.html">Términos y condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

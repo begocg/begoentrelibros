@@ -4,14 +4,14 @@
 
 :root {
   --crema:      #fdf6ec;
-  --crema-dark: #f5e9d4;
-  --girasol:    #e8a020;
-  --girasol-lt: #f4c755;
-  --verde:      #4a6741;
-  --verde-lt:   #7a9e6e;
-  --tinta:      #2a2018;
-  --tinta-mid:  #4d3d2a;
-  --tinta-lt:   #7a6a55;
+  --crema-dark: #f5f0e2;
+  --girasol:    #8E88A3;
+  --girasol-lt: #A399B8;
+  --verde:      #919d85;
+  --verde-lt:   #A8B099;
+  --tinta:      #81785A;
+  --tinta-mid:  #9A8F74;
+  --tinta-lt:   #B8AF90;
   --blanco:     #fffdf8;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -28,8 +28,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--crema);
-  color: var(--tinta);
+  background: var(--crema-dark);
+  color: var(--verde);
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.7;
@@ -41,9 +41,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(253,246,236,0.92);
+  background: rgba(235,225,198,0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(232,160,32,0.2);
 }
 
 .header-inner {
@@ -59,7 +58,7 @@ header {
 .logo {
   font-family: 'Dynalight', cursive;
   font-size: 2rem;
-  color: var(--tinta);
+  color: var(--verde);
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 0.2s;
@@ -92,7 +91,7 @@ nav a::after {
   background: var(--girasol);
   transition: width 0.3s ease;
 }
-nav a:hover { color: var(--tinta); }
+nav a:hover { color: var(--verde); }
 nav a:hover::after { width: 100%; }
 
 /* ---- HERO ---- */
@@ -116,7 +115,7 @@ nav a:hover::after { width: 100%; }
 .hero-text {
   font-family: 'Dynalight', cursive;
   font-size: clamp(2rem, 6vw, 3.5rem);
-  color: var(--tinta);
+  color: var(--verde);
   text-align: center;
   letter-spacing: 0.02em;
   animation: fadeUp 0.9s ease both;
@@ -143,7 +142,7 @@ nav a:hover::after { width: 100%; }
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 300;
-  color: var(--tinta);
+  color: var(--verde);
   line-height: 1.15;
   margin-bottom: 2.5rem;
 }
@@ -153,19 +152,32 @@ nav a:hover::after { width: 100%; }
   max-width: 1100px;
   margin: 0 auto;
   padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-libros > .section-label,
+.section-libros > .section-title {
+  margin-bottom: 2rem;
+}
+
+.libros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .libro-card {
   display: flex;
-  gap: 3.5rem;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
   cursor: pointer;
   background: var(--blanco);
-  border-radius: 20px;
-  padding: 2.5rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 820px;
 }
 .libro-card:hover {
   transform: translateY(-6px);
@@ -174,7 +186,8 @@ nav a:hover::after { width: 100%; }
 
 .libro-img-wrap {
   position: relative;
-  flex: 0 0 320px;
+  width: 220px;
+  height: 320px;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -189,7 +202,7 @@ nav a:hover::after { width: 100%; }
 .libro-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(42,32,24,0.45);
+  background: rgba(142,136,163,0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,7 +226,7 @@ nav a:hover::after { width: 100%; }
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
-  color: var(--tinta);
+  color: var(--verde);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -221,7 +234,7 @@ nav a:hover::after { width: 100%; }
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 600;
-  color: var(--verde);
+  color: var(--girasol);
   margin-bottom: 1.5rem;
 }
 .tags {
@@ -231,7 +244,7 @@ nav a:hover::after { width: 100%; }
 }
 .tags span {
   background: var(--crema-dark);
-  border: 1px solid rgba(232,160,32,0.3);
+  border: 1px solid rgba(142,136,163,0.3);
   color: var(--tinta-mid);
   font-size: 0.78rem;
   font-weight: 500;
@@ -254,7 +267,7 @@ nav a:hover::after { width: 100%; }
   left: 0;
   right: 0;
   height: 160px;
-  background: var(--crema);
+  background: var(--crema-dark);
   clip-path: ellipse(60% 100% at 50% 0%);
 }
 .section-bio::after {
@@ -264,12 +277,12 @@ nav a:hover::after { width: 100%; }
   left: 0;
   right: 0;
   height: 160px;
-  background: var(--crema);
+  background: var(--crema-dark);
   clip-path: ellipse(60% 100% at 50% 100%);
   z-index: 1;
 }
 
-.section-bio .section-label { color: var(--girasol-lt); }
+.section-bio .section-label { color: var(--tinta); }
 .section-bio .section-title { color: #fff; }
 
 .bio-grid {
@@ -286,14 +299,6 @@ nav a:hover::after { width: 100%; }
   font-size: 1.05rem;
   margin-bottom: 1.2rem;
 }
-.bio-text .bio-cta {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.3rem;
-  color: var(--girasol-lt);
-  margin-top: 2rem;
-}
-
 .bio-photo {
   position: relative;
 }
@@ -301,7 +306,7 @@ nav a:hover::after { width: 100%; }
   content: '';
   position: absolute;
   inset: -12px;
-  border: 2px solid rgba(244,199,85,0.4);
+  border: 2px solid rgba(235,225,198,0.4);
   border-radius: 20px;
   pointer-events: none;
 }
@@ -314,7 +319,7 @@ nav a:hover::after { width: 100%; }
 
 /* ---- EVENTOS & RESEÑAS ---- */
 .section-extras {
-  background: var(--crema);
+  background: var(--crema-dark);
   padding: 7rem 2rem 6rem;
   position: relative;
   z-index: 2;
@@ -336,18 +341,6 @@ nav a:hover::after { width: 100%; }
   margin-bottom: 1.5rem;
 }
 
-/* Eventos */
-.eventos-placeholder {
-  background: var(--blanco);
-  border: 2px dashed rgba(232,160,32,0.4);
-  border-radius: 16px;
-  padding: 3rem 2rem;
-  text-align: center;
-  color: var(--tinta-lt);
-}
-.eventos-icon { font-size: 2.5rem; display: block; margin: 0.8rem auto; }
-.eventos-sub { font-size: 0.9rem; margin-top: 0.5rem; }
-
 .eventos-list {
   display: flex;
   flex-direction: column;
@@ -361,12 +354,12 @@ nav a:hover::after { width: 100%; }
   background: var(--blanco);
   border-left: 4px solid var(--girasol);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(42,32,24,0.08);
+  box-shadow: 0 2px 8px rgba(142,136,163,0.08);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .evento-item:hover {
   transform: translateX(4px);
-  box-shadow: 0 4px 16px rgba(42,32,24,0.12);
+  box-shadow: 0 4px 16px rgba(142,136,163,0.12);
 }
 
 .evento-fecha {
@@ -384,7 +377,7 @@ nav a:hover::after { width: 100%; }
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 400;
-  color: var(--tinta);
+  color: var(--verde);
   margin-bottom: 0.3rem;
 }
 
@@ -419,7 +412,7 @@ nav a:hover::after { width: 100%; }
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-style: italic;
-  color: var(--tinta);
+  color: var(--verde);
   line-height: 1.4;
   margin-bottom: 1rem;
 }
@@ -446,8 +439,8 @@ nav a:hover::after { width: 100%; }
 
 .slider-btn {
   background: var(--blanco);
-  border: 1.5px solid rgba(232,160,32,0.4);
-  color: var(--tinta);
+  border: 1.5px solid rgba(142,136,163,0.4);
+  color: var(--verde);
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -466,7 +459,7 @@ nav a:hover::after { width: 100%; }
 .dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: rgba(42,32,24,0.2);
+  background: rgba(142,136,163,0.2);
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -474,7 +467,7 @@ nav a:hover::after { width: 100%; }
 
 /* ---- FOOTER ---- */
 footer {
-  background: var(--tinta);
+  background: var(--verde);
   color: rgba(255,255,255,0.6);
   padding: 3rem 2rem;
   text-align: center;
@@ -488,7 +481,7 @@ footer {
 .footer-name {
   font-family: var(--font-script);
   font-size: 2rem;
-  color: var(--girasol-lt);
+  color: var(--tinta);
   margin-bottom: 0.5rem;
 }
 
@@ -520,6 +513,10 @@ footer {
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
+  .libros-grid {
+    grid-template-columns: 1fr;
+  }
+
   .libro-card {
     flex-direction: column;
     gap: 2rem;
@@ -556,5 +553,13 @@ footer {
   
   .hero-img {
     max-width: 95vw;
+  }
+
+  .libro-img-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 220 / 320;
+    max-width: 280px;
+    margin: 0 auto;
   }
 }

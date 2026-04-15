@@ -1,0 +1,25 @@
+/* ============================================
+   BEGO GONZÁLEZ — PÁGINA CUANDO LOS GIRASOLES
+   COLORES ORIGINALES (NO HEREDADOS)
+   ============================================ */
+
+:root {
+  --crema:      #fdf6ec;
+  --crema-dark: #f5e9d4;
+  --girasol:    #e8a020;
+  --girasol-lt: #f4c755;
+  --verde:      #4a6741;
+  --verde-lt:   #7a9e6e;
+  --tinta:      #2a2018;
+  --tinta-mid:  #4d3d2a;
+  --tinta-lt:   #7a6a55;
+  --blanco:     #fffdf8;
+}
+
+header {
+  border-bottom: 1px solid rgba(232,160,32,0.2);
+}
+
+nav a::after {
+  background: #e8a020;
+}
